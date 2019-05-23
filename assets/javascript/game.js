@@ -24,6 +24,7 @@ document.onkeyup = function(event) {
     
     if (guessesLeft === 0) {
             losses++;
+            guessesLeft = 10;
         };
         userGuesses.textContent = "You chose: " + userGuess;
         winsText.textContent = "Wins: " + wins;

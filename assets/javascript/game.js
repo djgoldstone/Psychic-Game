@@ -11,7 +11,14 @@ var userGuessesText = document.getElementById("user-guesses-text");
 var remainingGuessesText = document.getElementById("remaining-guesses-text");
 var userGuesses = document.getElementById("user-guess");
 var computerChoice = alphabet[Math.floor(Math.random() * alphabet.length)];
-console.log(computerChoice);
+
+userGuesses.textContent = "You chose: ";
+winsText.textContent = "Wins: ";
+lossesText.textContent = "Losses: ";
+remainingGuessesText.textContent = "Guesses Remaining: ";
+userGuessesText.textContent = "Your guesses so far...";
+
+
 
 document.onkeyup = function(event) {
     var userGuess = event.key.toLowerCase();
@@ -28,11 +35,11 @@ document.onkeyup = function(event) {
                 guessesLeft = 10;
                 guessedLetters = [];
             };
-        userGuesses.textContent = "You chose: " + userGuess;
-        winsText.textContent = "Wins: " + wins;
-        lossesText.textContent = "Losses: " + losses;
-        remainingGuessesText.textContent = "Guesses Remaining: " + guessesLeft;
-        userGuessesText.textContent = "Your guesses so far..." + guessedLetters;
+    userGuesses.textContent = "You chose: " + userGuess;
+    winsText.textContent = "Wins: " + wins;
+    lossesText.textContent = "Losses: " + losses;
+    remainingGuessesText.textContent = "Guesses Remaining: " + guessesLeft;
+    userGuessesText.textContent = "Your guesses so far..." + guessedLetters;
 
     
     

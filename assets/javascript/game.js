@@ -1,4 +1,4 @@
-var alphabet = "a,b,c,d,e,f,g,h,i,j,k,l,m,n,o,p,q,r,s,t,u,v,w,x,y,z";
+var alphabet = ["a","b","c","d","e","f","g","h","i","j","k","l","m","n","o","p","q","r","s","t","u","v","w","x","y","z"];
 
 var wins = 0;
 var losses = 0;
@@ -12,12 +12,12 @@ var userGuessesText = document.getElementById("user-guesses-text");
 var remainingGuessesText = document.getElementById("remaining-guesses-text");
 
 document.onkeyup = function(event) {
-    var userGuess = event.key;
+    var userGuess = event.key.toLowerCase();
     var computerChoice = Math.floor(Math.random() * alphabet.length);
 
     if (typeof userGuess === "string") {
         if (userGuess === computerChoice) {
-            wins++
+            wins++;
         } else {
             guessesLeft--;
         }

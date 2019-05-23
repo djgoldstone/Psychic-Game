@@ -3,28 +3,38 @@ var alphabet = ["a","b","c","d","e","f","g","h","i","j","k","l","m","n","o","p",
 var wins = 0;
 var losses = 0;
 var guessesLeft = 10;
-
 var guessedLetters = [];
 
 var winsText = document.getElementById("wins-text");
 var lossesText = document.getElementById("losses-text");
 var userGuessesText = document.getElementById("user-guesses-text");
 var remainingGuessesText = document.getElementById("remaining-guesses-text");
+var userGuesses = document.getElementById("user-guess");
 
 document.onkeyup = function(event) {
     var userGuess = event.key.toLowerCase();
-    var computerChoice = Math.floor(Math.random() * alphabet.length);
-
-    if (typeof userGuess === "string") {
-        if (userGuess === computerChoice) {
+    guessedLetters.push(userGuess);
+    var computerChoice = Math.floor(Math.random * alphabet.length);
+    
+    if (userGuess === computerChoice) {
             wins++;
         } else {
             guessesLeft--;
-        }
-        if (guessesLeft === 0) {
+        };
+    
+    if (guessesLeft === 0) {
             losses++;
-        }
-    }
+        };
+        userGuesses.textContent = "You chose: " + userGuess;
+        winsText.textContent = "Wins: " + wins;
+        lossesText.textContent = "Losses: " + losses;
+        remainingGuessesText.textContent = "Guesses Remaining: " + guessesLeft;
+        userGuessesText.textContent = "Your guesses so far..." + guessedLetters;
+    };
 
-    }
-}
+    
+
+    
+
+
+

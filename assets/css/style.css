@@ -3,7 +3,11 @@
     margin: 0 auto;
     width: 50%;
     float: left;
+    background: none !important;
 }
 body {
     background-image: url(https://blog.psychics.com/wp-content/uploads/2015/08/Crystal-ball.jpg);
+}
+h2, p {
+    color: white;
 }

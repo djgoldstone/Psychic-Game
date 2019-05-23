@@ -10,27 +10,32 @@ var lossesText = document.getElementById("losses-text");
 var userGuessesText = document.getElementById("user-guesses-text");
 var remainingGuessesText = document.getElementById("remaining-guesses-text");
 var userGuesses = document.getElementById("user-guess");
+var computerChoice = alphabet[Math.floor(Math.random() * alphabet.length)];
+console.log(computerChoice);
 
 document.onkeyup = function(event) {
     var userGuess = event.key.toLowerCase();
     guessedLetters.push(userGuess);
-    var computerChoice = Math.floor(Math.random * alphabet.length);
-    
-    if (userGuess === computerChoice) {
+
+        if (userGuess === computerChoice) {
             wins++;
         } else {
             guessesLeft--;
         };
     
-    if (guessesLeft === 0) {
-            losses++;
-            guessesLeft = 10;
-        };
+        if (guessesLeft === 0) {
+                losses++;
+                guessesLeft = 10;
+                guessedLetters = [];
+            };
         userGuesses.textContent = "You chose: " + userGuess;
         winsText.textContent = "Wins: " + wins;
         lossesText.textContent = "Losses: " + losses;
         remainingGuessesText.textContent = "Guesses Remaining: " + guessesLeft;
         userGuessesText.textContent = "Your guesses so far..." + guessedLetters;
+
+    
+    
     };
 
     

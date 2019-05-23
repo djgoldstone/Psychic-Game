@@ -14,4 +14,17 @@ var remainingGuessesText = document.getElementById("remaining-guesses-text");
 document.onkeyup = function(event) {
     var userGuess = event.key;
     var computerChoice = Math.floor(Math.random() * alphabet.length);
+
+    if (typeof userGuess === "string") {
+        if (userGuess === computerChoice) {
+            wins++
+        } else {
+            guessesLeft--;
+        }
+        if (guessesLeft === 0) {
+            losses++;
+        }
+    }
+
+    }
 }

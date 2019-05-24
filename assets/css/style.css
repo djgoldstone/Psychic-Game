@@ -1,24 +1,46 @@
 html {
     height: 100%;
 }
-.jumbotron {
-    text-align: center;
-    margin: 0 auto;
-    width: 50%;
-    background: none !important;
-    color: black;
-    font-size: 10px;
-    margin-left: 27.5%;
-}
 body {
     background-image: url(https://blog.psychics.com/wp-content/uploads/2015/08/Crystal-ball.jpg);
     background-size: 100% 100%;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
-p {
-    color: black;
-    font-size: 10px;
+h2, p {
+    color: white;
 }
 .container {
-    margin-top: 22%;
-    /* margin-left: 75%; */
+    float: left;
+    padding-left: 10px;
 }
+@media (max-width: 980px) {
+    body {
+        background-size: 100% 100%;
+    }
+   
+    
+}
+@media (max-width: 768px) {
+    p {
+        font-size: 14px;
+    }
+    body {
+        background-size: 100% 100%;
+    }
+    
+}
+@media (max-width: 540px) {
+    h2 {
+        font-size: 16px;
+    } 
+    p {
+        font-size: 12px;
+    }
+    body {
+        background-size: 100% 100%;
+    }
+    .container {
+        width: 30%;
+    }
+    
+  }

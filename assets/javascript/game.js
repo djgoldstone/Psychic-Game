@@ -1,4 +1,3 @@
-// var alphabet = ["a","b","c","d","e","f","g","h","i","j","k","l","m","n","o","p","q","r","s","t","u","v","w","x","y","z"];
 var alphabet = "abcdefghojklmnopqrstuvwxyz";
 
 var wins = 0;
@@ -19,7 +18,10 @@ lossesText.textContent = "Losses: ";
 remainingGuessesText.textContent = "Guesses Remaining: 10";
 userGuessesText.textContent = "Your guesses so far...";
 
-//alphabet.includes(userGuess) && guessedLetters.includes(userGuess) === false;
+var resetFunc = () => {
+    computerChoice = alphabet[Math.floor(Math.random() * alphabet.length)];
+};
+
 
 document.onkeyup = function(event) {
     var userGuess = event.key.toLowerCase();
@@ -31,12 +33,12 @@ document.onkeyup = function(event) {
         alert("Choose a letter!");
     } else {
             
-            
-        
-    
         if (userGuess === computerChoice) {
             wins++;
-            alert("Nice!");
+            alert("Nice! You guessed correctly!");
+            guessesLeft = 10;
+            guessedLetters = [];
+            resetFunc();
         } else {
             guessesLeft--;
         };

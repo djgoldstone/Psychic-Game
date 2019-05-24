@@ -1,13 +1,24 @@
+html {
+    height: 100%;
+}
 .jumbotron {
     text-align: center;
     margin: 0 auto;
     width: 50%;
-    float: left;
     background: none !important;
+    color: black;
+    font-size: 10px;
+    margin-left: 27.5%;
 }
 body {
     background-image: url(https://blog.psychics.com/wp-content/uploads/2015/08/Crystal-ball.jpg);
+    background-size: 100% 100%;
 }
-h2, p {
-    color: white;
+p {
+    color: black;
+    font-size: 10px;
+}
+.container {
+    margin-top: 22%;
+    /* margin-left: 75%; */
 }

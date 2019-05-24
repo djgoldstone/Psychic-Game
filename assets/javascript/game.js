@@ -19,11 +19,12 @@ lossesText.textContent = "Losses: ";
 remainingGuessesText.textContent = "Guesses Remaining: 10";
 userGuessesText.textContent = "Your guesses so far...";
 
-
+//alphabet.includes(userGuess) && guessedLetters.includes(userGuess) === false;
 
 document.onkeyup = function(event) {
     var userGuess = event.key.toLowerCase();
     guessedLetters.push(userGuess);
+    var joinedGuesses = guessedLetters.join(" ");
 
     
     if (userGuess >= 0 || userGuess.length > 1) { 
@@ -49,7 +50,7 @@ document.onkeyup = function(event) {
     winsText.textContent = "Wins: " + wins;
     lossesText.textContent = "Losses: " + losses;
     remainingGuessesText.textContent = "Guesses Remaining: " + guessesLeft;
-    userGuessesText.textContent = "Your guesses so far..." + guessedLetters;
+    userGuessesText.textContent = "Your guesses so far..." + joinedGuesses;
 
     
         } 

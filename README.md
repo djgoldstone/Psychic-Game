@@ -20,4 +20,4 @@ ___
 
 ___
 
-![Index Page](assets/(Index-Page-Screenshot.png)
+![Index Page](assets/Index-Page-Screenshot.png)
